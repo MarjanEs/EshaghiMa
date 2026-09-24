@@ -1,0 +1,52 @@
+planner_node:
+  ros__parameters:
+
+    # =========================================================
+    # ROS topics
+    # =========================================================
+
+    map_topic: "/map"
+    odom_topic: "/odom"
+    scan_topic: "/scan"
+    goal_topic: "/goal_pose"
+    cmd_vel_topic: "/cmd_vel"
+
+    global_path_topic: "/global_path"
+    waypoints_topic: "/waypoints"
+
+    # =========================================================
+    # Goal tolerances
+    # =========================================================
+
+    goal_tolerance: 0.25
+    waypoint_tolerance: 0.30
+
+    # =========================================================
+    # Potential field
+    # =========================================================
+
+    attractive_gain: 1.5
+    repulsive_gain: 1.0
+    obstacle_distance_threshold: 1.0
+
+    # =========================================================
+    # Velocity
+    # =========================================================
+
+    max_linear_velocity: 0.30
+    max_angular_velocity: 1.0
+    min_linear_velocity: 0.05
+
+    # =========================================================
+    # Controller
+    # =========================================================
+
+    control_frequency: 10.0
+
+    # =========================================================
+    # A* obstacle inflation
+    #
+    # This should roughly account for the robot's size.
+    # =========================================================
+
+    obstacle_inflation_radius: 0.20
